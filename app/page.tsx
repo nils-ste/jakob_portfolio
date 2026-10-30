@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main>
-      <h1 className="text-4xl font-cormorant">
-        Jakob's Portfolio
-      </h1>
-      <p>Welcome to my portfolio!</p>
+      <Image
+        src="/images/globalFacism.jpg"
+        alt="Global Facism"
+        width={1200}
+        height={800}
+        className="mb-2 max-w-full h-auto"
+      />
     </main>
   );
 }
