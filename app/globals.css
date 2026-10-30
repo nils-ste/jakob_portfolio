@@ -1,9 +1,15 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-cormorant: var(--font-cormorant-garamond);
+}
+
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
+  background-color: #ffffff;
+  color: #171717;
 }
