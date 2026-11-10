@@ -8,20 +8,21 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   return (
-    <section className="flex flex-col items-center">
-      <div className="relative overflow-hidden md:max-w-100 md:m-5">
+    <section className="w-full flex flex-col items-center">
+      <div className="w-full md:max-w-100 ">
         {project.images ? (
           <ImageScroll images={project.images} />
-        ) : (
+        ) : project.cover ? (
           <Image
             src={project.cover}
             alt={project.title}
             width={1200}
             height={800}
-            className="h-auto w-full transition-all duration-500 group-hover:scale-105 group-hover:opacity-50"
+            className="w-full h-auto"
           />
-        )}
+        ) : null}
       </div>
+
       <h1>{project.title}</h1>
       <p>{project.description}</p>
       <p>{project.year}</p>
